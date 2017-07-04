@@ -28,4 +28,24 @@ class BeaconTransmitterTests: XCTestCase
     func testBeaconInstantiates() {
         XCTAssertNotNil(beacon)
     }
+    
+    
+    func testThat_initialState_isUnknown()
+    {
+        XCTAssertEqual(beacon.state, .unknown)
+    }
+    
+    
+    func testThat_afterStart_stateIsUnsupported()
+    {
+        let expect = expectation(description: "powerOn")
+        beacon.enableTransmitting(true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            if self.beacon.state == .unsupported
+            {
+                expect.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 0.1)
+    }
 }
