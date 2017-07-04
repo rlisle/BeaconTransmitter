@@ -10,6 +10,7 @@
 		E40820641F0BC6F10006B7B0 /* BeaconTransmitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E408205A1F0BC6F00006B7B0 /* BeaconTransmitter.framework */; };
 		E40820691F0BC6F10006B7B0 /* BeaconTransmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40820681F0BC6F10006B7B0 /* BeaconTransmitterTests.swift */; };
 		E408206B1F0BC6F10006B7B0 /* BeaconTransmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E408205D1F0BC6F00006B7B0 /* BeaconTransmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E40820771F0BC9F00006B7B0 /* BeaconTransmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40820761F0BC9F00006B7B0 /* BeaconTransmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 		E40820631F0BC6F10006B7B0 /* BeaconTransmitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconTransmitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40820681F0BC6F10006B7B0 /* BeaconTransmitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconTransmitterTests.swift; sourceTree = "<group>"; };
 		E408206A1F0BC6F10006B7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40820741F0BC9AD0006B7B0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E40820761F0BC9F00006B7B0 /* BeaconTransmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconTransmitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		E40820501F0BC6F00006B7B0 = {
 			isa = PBXGroup;
 			children = (
+				E40820741F0BC9AD0006B7B0 /* README.md */,
 				E408205C1F0BC6F00006B7B0 /* BeaconTransmitter */,
 				E40820671F0BC6F10006B7B0 /* BeaconTransmitterTests */,
 				E408205B1F0BC6F00006B7B0 /* Products */,
@@ -71,6 +75,7 @@
 		E408205C1F0BC6F00006B7B0 /* BeaconTransmitter */ = {
 			isa = PBXGroup;
 			children = (
+				E40820761F0BC9F00006B7B0 /* BeaconTransmitter.swift */,
 				E408205D1F0BC6F00006B7B0 /* BeaconTransmitter.h */,
 				E408205E1F0BC6F00006B7B0 /* Info.plist */,
 			);
@@ -149,6 +154,7 @@
 					E40820591F0BC6F00006B7B0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 65NFWK9633;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					E40820621F0BC6F10006B7B0 = {
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40820771F0BC9F00006B7B0 /* BeaconTransmitter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +331,7 @@
 		E408206F1F0BC6F10006B7B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
@@ -336,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronlisle.BeaconTransmitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +352,7 @@
 		E40820701F0BC6F10006B7B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
@@ -362,6 +372,7 @@
 		E40820721F0BC6F10006B7B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
 				INFOPLIST_FILE = BeaconTransmitterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +385,7 @@
 		E40820731F0BC6F10006B7B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
 				INFOPLIST_FILE = BeaconTransmitterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +414,7 @@
 				E40820701F0BC6F10006B7B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E40820711F0BC6F10006B7B0 /* Build configuration list for PBXNativeTarget "BeaconTransmitterTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +423,7 @@
 				E40820731F0BC6F10006B7B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

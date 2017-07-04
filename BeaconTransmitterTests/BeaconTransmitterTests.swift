@@ -7,16 +7,21 @@
 //
 
 import XCTest
+import CoreLocation
+import CoreBluetooth
 @testable import BeaconTransmitter
 
 class BeaconTransmitterTests: XCTestCase
 {
     var beacon: BeaconTransmitter!
+    var testUUID = UUID()
+    var testMajor: CLBeaconMajorValue = 1
+    var testMinor: CLBeaconMinorValue = 0
     
     override func setUp() {
         super.setUp()
         
-        beacon = BeaconTransmitter()
+        beacon = BeaconTransmitter(uuid: testUUID, major: testMajor, minor: testMinor)
     }
 
     
